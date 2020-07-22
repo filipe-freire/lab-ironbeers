@@ -1,0 +1,14 @@
+<h1>It's working! 🍺</h1>
+
+<ul>
+  {{#each beersFromApi}}
+    <li>
+      
+        <img src="{{image_url}}" alt="{{name}}">
+        <strong>{{name}}</strong>
+        <p>{{ description }}</p>
+        <h4> <em> {{ tagline }} </em> </h4>
+        <hr>
+    </li>
+  {{/each}}
+</ul>
