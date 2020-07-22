@@ -1,12 +1,14 @@
-<ul>
+
   {{ randomBeer }}
-    <li>
-        <img src="{{ image_url }}" alt="{{ name }}">
-        <strong>{{ name }}</strong>
-        <p>{{ description }}</p>
-        <h4> <em> {{ tagline }} </em> </h4>
-        <h5> {{ food_pairing}} </h5>
+    
+        {{> beerpartial}}
+        <ul>
+          {{#each food_pairing}}
+            <li>
+              {{this}}
+            </li>
+          {{/each}}
+        </ul>
         <p><em> {{ brewers_tips }} </em></p>
         <hr>
-    </li>
-</ul>
+    
