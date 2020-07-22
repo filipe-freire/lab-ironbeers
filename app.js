@@ -9,6 +9,7 @@ const punkAPI = new PunkAPIWrapper();
 
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'views'));
+hbs.registerPartials(path.join(__dirname, '/views/partials'));
 
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -19,7 +20,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Add the route handlers here:
 
 app.get('/', (req, res) => {
-  res.render('index');
+  res.render('home');
 });
 
-app.listen(3000, () => console.log('🏃‍ on port 3000'));
+app.listen(3010, () => console.log('🏃‍ on port 3010'));
